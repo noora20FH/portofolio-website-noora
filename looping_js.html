@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog Noora</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <section>
+            <p>Bilangan prima adalah bilangan yang hanya bisa dibagi dengan 1 dan bilangan itu sendiri.
+                <br>
+                Bilangan Prima antara 1 sampai 20:
+
+            </p>
+
+        </section>
+    </body>
+
+    <script>
+        function primeNumber() {
+            for (let i = 2; i <= 20; i++) {
+                let isPrime = true;
+                
+                // Cek apakah bilangan tersebut prima
+                for (let j = 2; j < i; j++) {
+                    if (i % j === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                
+                // Jika bilangan prima, tampilkan ke console
+                if (isPrime) {
+                    console.log(i);
+                    document.querySelector('section').innerHTML += i + " ";
+                }
+            }
+        }
+        
+        // Panggil fungsi
+        primeNumber();
+    </script>
+</html>

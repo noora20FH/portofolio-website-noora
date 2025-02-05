@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog Noora</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <section>
+            <p>Input any number: </p>
+            <input type="number" id="numberInput">
+            <button onclick="checkNumber()">Cek Angka</button>
+            <p id="result"></p>
+        </section>
+    </body>
+
+    <script>
+        function checkNumber() {
+            let number = document.getElementById("numberInput").value;
+            let result = document.getElementById("result");
+            
+            if (number === "") {
+                result.textContent = "Silakan masukkan angka terlebih dahulu";
+                return;
+            }
+            
+            if (number % 2 === 0) {
+                result.textContent = `Angka ${number} merupakan bilangan genap`;
+            } else {
+                result.textContent = `Angka ${number} merupakan bilangan ganjil`;
+            }
+        }
+    </script>
+</html>
